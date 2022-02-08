@@ -9,7 +9,7 @@ from workdaymanagement.models import Workday
 def home(request):
      return render(request,'home.html')
 
-class get_list(ListView):
+class get_list(ListView): # Industry norms - ClassName follows CamelCase naming conventions 
      model=Workday
      template_name = 'workday/workday_list.html'
 
