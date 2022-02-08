@@ -14,7 +14,7 @@ class Location(models.Model):
 
 class Workday(models.Model):
      id=models.IntegerField(primary_key=True)
-     user=models.ForeignKey(User,on_delete=models.CASCADE)
+     user=models.ForeignKey(User,on_delete=models.CASCADE) # profile one to one with auth.User 
      location=models.ForeignKey(Location,on_delete=models.CASCADE)
      sector=models.CharField(max_length=10)
      work_date=models.DateField(default=date.today)
