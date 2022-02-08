@@ -1,6 +1,6 @@
 from django.db import models
 
-class User(models.Model):
+class User(models.Model): # Profile - auth user
     id=models.IntegerField(primary_key=True)
     f_name=models.CharField(max_length=20)
     l_name=models.CharField(max_length=20)
