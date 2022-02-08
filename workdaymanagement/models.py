@@ -21,7 +21,7 @@ class Workday(models.Model):
      time_in=models.TimeField()
      time_out=models.TimeField()
      hours_code=models.CharField(max_length=10)
-     FBP_payroll=models.FloatField()
+     FBP_payroll=models.FloatField() # Only one type of payroll per workday.. You may want to define it as a different entity 
      AMCO_payroll=models.FloatField()
 
      def get_absolute_url(self):
