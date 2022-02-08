@@ -3,6 +3,8 @@ from datetime import date
 from django.db import models
 from django.urls import reverse
 
+from usermanagement.models import User
+
 
 class Location(models.Model):
     location=models.CharField(max_length=20)
@@ -11,8 +13,8 @@ class Location(models.Model):
          return self.location
 
 class Workday(models.Model):
-     fileno=models.IntegerField(primary_key=True)
-     user=models.CharField(max_length=20)
+     id=models.IntegerField(primary_key=True)
+     user=models.ForeignKey(User,on_delete=models.CASCADE)
      location=models.ForeignKey(Location,on_delete=models.CASCADE)
      sector=models.CharField(max_length=10)
      work_date=models.DateField(default=date.today)

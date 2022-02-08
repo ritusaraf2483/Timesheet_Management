@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.home),
     path('workday/',include('workdaymanagement.urls',namespace='Workday')),
+    path('user/',include('usermanagement.urls',namespace='Users'))
 ]
